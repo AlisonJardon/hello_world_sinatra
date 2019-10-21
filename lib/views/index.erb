@@ -5,12 +5,14 @@
   <body>
     <h1>Mon super site de FAKE NEWS !</h1>
    
- 			<% gossips.each do |gossip| %>
-       <p>
-          <%= gossip.author %>
+ 			<% gossips.each_with_index do |gossip, id| %>
+       
+         <p> <%= gossip.author %>
           <br/>
           <%= gossip.content %>
         </p>
+        <p> =>	
+       <a href="/gossips/<%= id + 1 %>">Page du ragot n°<%= id + 1 %> </a></p>
       <% end %>
 		<br>
    <p> Pour balancer une nouvelle info dont tout le monde se moque c'est <a href="/gossips/new/">ICI</a> !</p>
