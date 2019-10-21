@@ -15,5 +15,9 @@ class ApplicationController < Sinatra::Base
 	redirect '/'
 	end
 
+get '/gossips/:id' do
+	erb :show, locals: {find_gossip: params["id"], wanted_gossip: Gossip.find(params["id"])}
+	#Je définis plusieurs variables que je vais appeler dans mon fichier show
+end
 
 end
