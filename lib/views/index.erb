@@ -3,9 +3,16 @@
     <title>The Gossip Project</title>
   </head>
   <body>
-    <h1>Mon super site de gossip, depuis le dossier views !</h1>
-   <p> Les nouveaux gossips arrivent bientôt ! </p>
-<br>
-   <p> En attendant tu peux créer <a href="/gossips/new/">un nouveau gossip !</a> </p>
+    <h1>Mon super site de FAKE NEWS !</h1>
+   
+ 			<% gossips.each do |gossip| %>
+       <p>
+          <%= gossip.author %>
+          <br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+		<br>
+   <p> Pour balancer une nouvelle info dont tout le monde se moque c'est <a href="/gossips/new/">ICI !</a> </p>
   </body>
 </html>
